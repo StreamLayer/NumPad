@@ -24,7 +24,8 @@ class Cell: UICollectionViewCell {
     didSet {
       if let attributedString = item.attributedString {
         button.setAttributedTitle(attributedString, for: .normal)
-      } else {
+    } else {
+        button.setAttributedTitle(nil, for: .normal)
         button.title = item.title
         button.titleColor = item.titleColor
         button.titleLabel?.font = item.font
